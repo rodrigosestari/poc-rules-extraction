@@ -1,6 +1,5 @@
 import pandas as pd
-from mlxtend.frequent_patterns import apriori
-from mlxtend.frequent_patterns import association_rules
+from mlxtend.frequent_patterns import apriori, association_rules
 from sklearn.preprocessing import OneHotEncoder
 
 
@@ -28,8 +27,9 @@ def get_rules(transactions):
     print("**CATEGORIES RULES** \n")
     print(categories_rules[["antecedents", "consequents"]].to_string(index=False))
 
+
 transactions = pd.read_json("data/transactions.gzip", orient='records', lines=True, compression='gzip')
 
-get_rules(transactions[transactions["business"] ==760])
+get_rules(transactions[transactions["business"] == 760])
 get_rules(transactions)
-get_rules(transactions[transactions["business"] ==837])
+get_rules(transactions[transactions["business"] == 837])

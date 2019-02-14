@@ -12,4 +12,4 @@ Simple Apriori Algorithm demo to extract rules from transactions, based on mlxte
                                  "sender_iban"])
                                  
 ## output
-- print output; rules based on the files "categorylevel_id"                           
+- print output; rules based on the field "categorylevel_id"                           
